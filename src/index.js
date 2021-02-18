@@ -40,8 +40,9 @@ const receipt1 = {
       drink: "Sparkling Blood Orange Soda",
       cost: 20
     },
-    paid: true
+    paid: false
   };
-  let receipts = [receipt1, receipt2, receipt3];
+
+  const receipts = [receipt1, receipt2, receipt3];
 
 ReactDOM.render(<App receipts={receipts}/>, document.getElementById('root'));

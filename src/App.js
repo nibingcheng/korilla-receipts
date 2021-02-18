@@ -7,20 +7,23 @@ class App extends Component {
     super(props);
     
     this.state = {
-      receipt1: this.props.receipts[0],
-      receipt2: this.props.receipts[1],
-      receipt3: this.props.receipts[2]
+      receipts: this.props.receipts
+      // receipt1: this.props.receipts[0],
+      // receipt2: this.props.receipts[1],
+      // receipt3: this.props.receipts[2]
     };
   };
 
-  render () {
-    return (
+  render () { 
+    console.log(this.state.receipts.length);
+    return ( 
       <div>
         <h1 className="truck-name">Korilla Receipts</h1>
         <div className="container">
-          <Receipt receipt={this.state.receipt1}/>
-          <Receipt receipt={this.state.receipt2}/>
-          <Receipt receipt={this.state.receipt3}/>
+          <Receipt receipt={this.state.receipts[0]}/>
+          <Receipt receipt={this.state.receipts[1]}/>
+          <Receipt receipt={this.state.receipts[2]}/>
+        
         </div>
       </div>
     )
