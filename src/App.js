@@ -13,14 +13,15 @@ class App extends Component {
     };
   };
 
-
   render () {
     return (
       <div>
         <h1 className="truck-name">Korilla Receipts</h1>
-        <Receipt receipt={this.state.receipt1}/>
-        <Receipt receipt={this.state.receipt2}/>
-        <Receipt receipt={this.state.receipt3}/>
+        <div className="container">
+          <Receipt receipt={this.state.receipt1}/>
+          <Receipt receipt={this.state.receipt2}/>
+          <Receipt receipt={this.state.receipt3}/>
+        </div>
       </div>
     )
   }
