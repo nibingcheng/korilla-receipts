@@ -16,14 +16,17 @@ class App extends Component {
 
   render () { 
     console.log(this.state.receipts.length);
+    const allReceipt = this.state.receipts.map((receiptElement, index) => {
+      return <Receipt receipt={receiptElement} key={index}/>
+    });
     return ( 
       <div>
         <h1 className="truck-name">Korilla Receipts</h1>
         <div className="container">
-          <Receipt receipt={this.state.receipts[0]}/>
+          {/* <Receipt receipt={this.state.receipts[0]}/>
           <Receipt receipt={this.state.receipts[1]}/>
-          <Receipt receipt={this.state.receipts[2]}/>
-        
+          <Receipt receipt={this.state.receipts[2]}/> */}
+          {allReceipt}
         </div>
       </div>
     )
